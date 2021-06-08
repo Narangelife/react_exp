@@ -34,6 +34,7 @@ jobs:
         if: ${{ success() && github.event_name == 'push' }}
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          PUBLISH_BRANCH: gh-pages
         run: |
           git config --global user.email "action@example.com"
           git config --global user.name "GitHub Action"
